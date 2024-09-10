@@ -932,6 +932,7 @@
        xml:space="preserve"
        style="font-style:italic;font-variant:normal;font-size:250px;font-family:'Barlow Condensed';-inkscape-font-specification:BarlowCondensed-Italic;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3.125"
        id="text346"
+       inkscape:label="match1-date"
        x="145.0421"
        y="938.74207"><tspan
          sodipodi:role="line"
@@ -943,6 +944,7 @@
        xml:space="preserve"
        style="font-variant:normal;font-weight:bold;font-size:250px;font-family:'Barlow Condensed';-inkscape-font-specification:BarlowCondensed-Bold;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3.125"
        id="text352"
+       inkscape:label="match1-place"
        x="1683.6837"
        y="1677.7214"><tspan
          sodipodi:role="line"
@@ -965,6 +967,7 @@
        xml:space="preserve"
        style="font-variant:normal;font-weight:bold;font-size:250px;font-family:Barlow;-inkscape-font-specification:Barlow-Bold;writing-mode:lr-tb;fill:#ec1375;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3.125"
        id="text364"
+       inkscape:label="match1-time"
        x="1688.8751"
        y="1993.42"><tspan
          sodipodi:role="line"

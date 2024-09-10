@@ -7,10 +7,7 @@
    width="1080"
    height="1080"
    viewBox="0 0 1080 1080"
-   sodipodi:docname="results_1.svg"
-   inkscape:version="1.2.1 (9c6d41e, 2022-07-14)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
@@ -357,37 +354,8 @@
          id="image534-8" />
     </mask>
   </defs>
-  <sodipodi:namedview
-     id="namedview134"
-     pagecolor="#ffffff"
-     bordercolor="#000000"
-     borderopacity="0.25"
-     inkscape:showpageshadow="2"
-     inkscape:pageopacity="0.0"
-     inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#d1d1d1"
-     showgrid="false"
-     showguides="true"
-     inkscape:zoom="0.53585999"
-     inkscape:cx="542.11922"
-     inkscape:cy="505.72912"
-     inkscape:window-width="1497"
-     inkscape:window-height="908"
-     inkscape:window-x="0"
-     inkscape:window-y="38"
-     inkscape:window-maximized="0"
-     inkscape:current-layer="g140">
-    <inkscape:page
-       x="0"
-       y="0"
-       id="page138"
-       width="1080"
-       height="1080" />
-  </sodipodi:namedview>
   <g
      id="g140"
-     inkscape:groupmode="layer"
-     inkscape:label="Page 1"
      transform="matrix(0.31999998,0,0,0.31999998,0,5.3930666e-5)">
     <g
        id="g142">
@@ -405,7 +373,8 @@
       </g>
     </g>
     <g
-       id="g154">
+       id="g154"
+       style="display:inline">
       <g
          id="g156"
          clip-path="url(#clipPath160)">
@@ -706,7 +675,6 @@
        y="3260.9116"><tspan
          x="183.29544 251.41135 302.21725 350.10071 398.88339 473.63101 530.61902 584.23499"
          y="3260.9116"
-         sodipodi:role="line"
          id="tspan574"
          style="stroke-width:3.125">#TeamNHB</tspan></text>
     <text
@@ -716,7 +684,6 @@
        y="609.59412"
        id="text1178"
        transform="skewX(-12.207792)"><tspan
-         sodipodi:role="line"
          id="tspan1176"
          style="font-size:400px;text-align:start;text-anchor:start;fill:#ffffff;stroke-width:3.125"
          x="273.02188"
@@ -726,9 +693,9 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:233.333px;line-height:1;font-family:'Barlow Condensed';-inkscape-font-specification:'Barlow Condensed, ';text-align:start;text-anchor:start;fill:#ffffff;stroke-width:3.125"
        x="142.10835"
        y="873.07471"
+       inkscape:label="date"
        id="text2185"><tspan
-         sodipodi:role="line"
-         id="tspan2183"
+         id="tspan575"
          style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:condensed;font-family:'Barlow Condensed';-inkscape-font-specification:'Barlow Condensed,  Italic Condensed';text-align:start;text-anchor:start;stroke-width:3.125"
          x="142.10835"
          y="873.07471">DIMANCHE 22 SEPTEMBRE</tspan></text>
@@ -782,7 +749,6 @@
                  y="0"><tspan
                    x="0 17.433228"
                    y="0"
-                   sodipodi:role="line"
                    id="tspan454"
                    style="font-size:40px;text-align:center;text-anchor:middle">37</tspan></text>
             </g>
@@ -824,7 +790,6 @@
            id="text500"
            x="1907.1099"
            y="1889.6912"><tspan
-             sodipodi:role="line"
              id="tspan498"
              style="text-align:center;text-anchor:middle;stroke-width:3.125"
              x="1907.1099"
@@ -877,7 +842,6 @@
                  id="text412"><tspan
                    x="0 12.122055"
                    y="0"
-                   sodipodi:role="line"
                    id="tspan410">vs</tspan></text>
             </g>
           </g>
@@ -889,8 +853,8 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:150px;line-height:1;font-family:Anton;-inkscape-font-specification:Anton;text-align:center;text-anchor:middle;fill:#e0038c;fill-opacity:1;stroke-width:3.125"
        x="1255.7157"
        y="1995.9006"
+       inkscape:label="match1-team1"
        id="text3206"><tspan
-         sodipodi:role="line"
          id="tspan3204"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:150px;font-family:'Barlow Condensed';-inkscape-font-specification:'Barlow Condensed,  Bold';text-align:end;text-anchor:end;fill:#e0038c;fill-opacity:1;stroke-width:3.125"
          x="1255.7157"
@@ -900,8 +864,8 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:150px;line-height:1;font-family:Anton;-inkscape-font-specification:Anton;text-align:center;text-anchor:middle;fill:#e0038c;fill-opacity:1;stroke-width:3.125"
        x="2118.0842"
        y="1995.9006"
+       inkscape:label="match1-team2"
        id="text3206-9"><tspan
-         sodipodi:role="line"
          id="tspan3204-3"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:150px;font-family:'Barlow Condensed';-inkscape-font-specification:'Barlow Condensed,  Bold';text-align:start;text-anchor:start;fill:#e0038c;fill-opacity:1;stroke-width:3.125"
          x="2118.0842"
@@ -912,7 +876,6 @@
        x="2285.0649"
        y="2740.9214"
        id="text4044"><tspan
-         sodipodi:role="line"
          id="tspan4042"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:100px;font-family:'Barlow Condensed';-inkscape-font-specification:'Barlow Condensed, ';fill:#ffffff;stroke-width:3.125"
          x="2285.0649"

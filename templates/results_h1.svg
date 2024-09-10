@@ -732,6 +732,7 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:233.333px;line-height:1;font-family:'Barlow Condensed';-inkscape-font-specification:'Barlow Condensed, ';text-align:start;text-anchor:start;fill:#ffffff;stroke-width:3.125"
        x="142.10835"
        y="873.07471"
+       inkscape:label="date"
        id="text2185"><tspan
          sodipodi:role="line"
          id="tspan2183"
@@ -895,6 +896,7 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:150px;line-height:1;font-family:Anton;-inkscape-font-specification:Anton;text-align:center;text-anchor:middle;fill:#e0038c;fill-opacity:1;stroke-width:3.125"
        x="1255.7157"
        y="1995.9006"
+       inkscape:label="match1-team1"
        id="text3206"><tspan
          sodipodi:role="line"
          id="tspan3204"
@@ -906,6 +908,7 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:150px;line-height:1;font-family:Anton;-inkscape-font-specification:Anton;text-align:center;text-anchor:middle;fill:#e0038c;fill-opacity:1;stroke-width:3.125"
        x="2118.0842"
        y="1995.9006"
+       inkscape:label="match1-team2"
        id="text3206-9"><tspan
          sodipodi:role="line"
          id="tspan3204-3"

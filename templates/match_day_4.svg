@@ -944,8 +944,8 @@
      showgrid="false"
      showguides="true"
      inkscape:zoom="0.3970946"
-     inkscape:cx="313.52731"
-     inkscape:cy="339.96937"
+     inkscape:cx="142.28348"
+     inkscape:cy="470.92053"
      inkscape:window-width="1498"
      inkscape:window-height="812"
      inkscape:window-x="0"
@@ -958,20 +958,6 @@
        id="page2193"
        width="1080"
        height="1080" />
-    <sodipodi:guide
-       position="-173.80693,996"
-       orientation="0,1"
-       id="guide3988"
-       inkscape:locked="false"
-       inkscape:label=""
-       inkscape:color="rgb(0,134,229)" />
-    <sodipodi:guide
-       position="50,863.17155"
-       orientation="-1,0"
-       id="guide3992"
-       inkscape:locked="false"
-       inkscape:label=""
-       inkscape:color="rgb(0,134,229)" />
   </sodipodi:namedview>
   <g
      id="g2195"
@@ -1242,6 +1228,7 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:233.333px;line-height:1;font-family:'Barlow Condensed';-inkscape-font-specification:'Barlow Condensed, ';text-align:start;text-anchor:start;fill:#ffffff;stroke-width:3.125"
        x="145.24074"
        y="873.25061"
+       inkscape:label="date"
        id="text2185"><tspan
          sodipodi:role="line"
          id="tspan2183"
@@ -1255,6 +1242,7 @@
          xml:space="preserve"
          style="font-variant:normal;font-weight:normal;font-size:125px;font-family:'Barlow Condensed';-inkscape-font-specification:BarlowCondensed-Regular;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3.125"
          id="text2427"
+         inkscape:label="match1-time"
          x="1686.25"
          y="1339.9525"><tspan
            sodipodi:role="line"
@@ -1313,6 +1301,7 @@
            style="font-style:italic;font-stretch:condensed;font-size:150px;line-height:1;font-family:'Barlow Condensed';-inkscape-font-specification:'Barlow Condensed,  Italic Condensed';text-align:start;text-anchor:start;fill:#e0038c;fill-opacity:1;stroke-width:3.125"
            x="1827.4449"
            y="1727.0336"
+           inkscape:label="match1-team1"
            id="text6826"><tspan
              sodipodi:role="line"
              id="tspan6824"
@@ -1324,6 +1313,7 @@
            style="font-style:italic;font-stretch:condensed;font-size:150px;line-height:1;font-family:'Barlow Condensed';-inkscape-font-specification:'Barlow Condensed,  Italic Condensed';text-align:end;text-anchor:end;fill:#e0038c;fill-opacity:1;stroke-width:3.125"
            x="1498.5651"
            y="1732.7164"
+           inkscape:label="match1-team2"
            id="text6826-6"><tspan
              sodipodi:role="line"
              id="tspan6824-5"
@@ -1339,6 +1329,7 @@
          xml:space="preserve"
          style="font-variant:normal;font-weight:normal;font-size:125px;font-family:'Barlow Condensed';-inkscape-font-specification:BarlowCondensed-Regular;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3.125"
          id="text2427-8"
+         inkscape:label="match2-time"
          x="1686.25"
          y="1339.9525"><tspan
            sodipodi:role="line"
@@ -1397,6 +1388,7 @@
            style="font-style:italic;font-stretch:condensed;font-size:150px;line-height:1;font-family:'Barlow Condensed';-inkscape-font-specification:'Barlow Condensed,  Italic Condensed';text-align:start;text-anchor:start;fill:#e0038c;fill-opacity:1;stroke-width:3.125"
            x="1827.4449"
            y="1727.0336"
+           inkscape:label="match2-team1"
            id="text6826-8"><tspan
              sodipodi:role="line"
              id="tspan6824-4"
@@ -1408,6 +1400,7 @@
            style="font-style:italic;font-stretch:condensed;font-size:150px;line-height:1;font-family:'Barlow Condensed';-inkscape-font-specification:'Barlow Condensed,  Italic Condensed';text-align:end;text-anchor:end;fill:#e0038c;fill-opacity:1;stroke-width:3.125"
            x="1498.5651"
            y="1732.7164"
+           inkscape:label="match2-team2"
            id="text6826-6-4"><tspan
              sodipodi:role="line"
              id="tspan6824-5-9"
@@ -1423,6 +1416,7 @@
          xml:space="preserve"
          style="font-variant:normal;font-weight:normal;font-size:125px;font-family:'Barlow Condensed';-inkscape-font-specification:BarlowCondensed-Regular;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3.125"
          id="text2427-83"
+         inkscape:label="match3-time"
          x="1686.25"
          y="1339.9525"><tspan
            sodipodi:role="line"
@@ -1481,6 +1475,7 @@
            style="font-style:italic;font-stretch:condensed;font-size:150px;line-height:1;font-family:'Barlow Condensed';-inkscape-font-specification:'Barlow Condensed,  Italic Condensed';text-align:start;text-anchor:start;fill:#e0038c;fill-opacity:1;stroke-width:3.125"
            x="1827.4449"
            y="1727.0336"
+           inkscape:label="match3-team1"
            id="text6826-4"><tspan
              sodipodi:role="line"
              id="tspan6824-6"
@@ -1492,6 +1487,7 @@
            style="font-style:italic;font-stretch:condensed;font-size:150px;line-height:1;font-family:'Barlow Condensed';-inkscape-font-specification:'Barlow Condensed,  Italic Condensed';text-align:end;text-anchor:end;fill:#e0038c;fill-opacity:1;stroke-width:3.125"
            x="1498.5651"
            y="1732.7164"
+           inkscape:label="match3-team2"
            id="text6826-6-9"><tspan
              sodipodi:role="line"
              id="tspan6824-5-7"
@@ -1507,6 +1503,7 @@
          xml:space="preserve"
          style="font-variant:normal;font-weight:normal;font-size:125px;font-family:'Barlow Condensed';-inkscape-font-specification:BarlowCondensed-Regular;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3.125"
          id="text2427-3"
+         inkscape:label="match4-time"
          x="1686.25"
          y="1339.9525"><tspan
            sodipodi:role="line"
@@ -1565,6 +1562,7 @@
            style="font-style:italic;font-stretch:condensed;font-size:150px;line-height:1;font-family:'Barlow Condensed';-inkscape-font-specification:'Barlow Condensed,  Italic Condensed';text-align:start;text-anchor:start;fill:#e0038c;fill-opacity:1;stroke-width:3.125"
            x="1827.4449"
            y="1727.0336"
+           inkscape:label="match4-team1"
            id="text6826-60"><tspan
              sodipodi:role="line"
              id="tspan6824-1"
@@ -1576,6 +1574,7 @@
            style="font-style:italic;font-stretch:condensed;font-size:150px;line-height:1;font-family:'Barlow Condensed';-inkscape-font-specification:'Barlow Condensed,  Italic Condensed';text-align:end;text-anchor:end;fill:#e0038c;fill-opacity:1;stroke-width:3.125"
            x="1498.5651"
            y="1732.7164"
+           inkscape:label="match4-team2"
            id="text6826-6-2"><tspan
              sodipodi:role="line"
              id="tspan6824-5-3"

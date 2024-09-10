@@ -771,6 +771,7 @@
        xml:space="preserve"
        style="font-variant:normal;font-weight:bold;font-size:127.984px;font-family:Barlow;-inkscape-font-specification:Barlow-Bold;writing-mode:lr-tb;fill:#344cb7;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3.18289"
        id="text1563"
+       inkscape:label="match1-team1"
        x="2102.2754"
        y="2455.5742"><tspan
          x="2102.2754 2182.6355 2258.3889 2283.9814 2363.3179 2396.9719 2471.7017 2544.896 2570.4885 2649.825 2683.479 2758.2087 2842.4077 2926.6069"
@@ -782,6 +783,7 @@
        xml:space="preserve"
        style="font-variant:normal;font-weight:bold;font-size:127.984px;font-family:Barlow;-inkscape-font-specification:Barlow-Bold;writing-mode:lr-tb;fill:#344cb7;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3.18289"
        id="text1569"
+       inkscape:label="match1-team2"
        x="521.20789"
        y="2460.105"><tspan
          x="521.20789 605.40698 685.76715 765.10358 790.69598 863.89026 949.75281 975.34528 1053.1461 1132.6106 1207.4684"
@@ -804,6 +806,7 @@
        xml:space="preserve"
        style="font-variant:normal;font-weight:bold;font-size:141.656px;font-family:'Barlow Condensed';-inkscape-font-specification:BarlowCondensed-Bold;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3.125"
        id="text1587"
+       inkscape:label="match1-place"
        x="1333.0067"
        y="1322.381"><tspan
          x="1333.0067 1405.8151 1472.9573 1539.958 1612.7664 1641.0964 1687.9827 1716.3127 1782.0386 1849.0393 1911.9321 1974.8248"
@@ -815,6 +818,7 @@
        xml:space="preserve"
        style="font-variant:normal;font-weight:bold;font-size:198.594px;font-family:Assistant;-inkscape-font-specification:Assistant-Bold;writing-mode:lr-tb;fill:#ec1375;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3.125"
        id="text1593"
+       inkscape:label="match1-time"
        x="1455.2256"
        y="1580.8889"><tspan
          x="1455.2256 1550.1488 1654.0082 1711.9948 1815.8542"
@@ -838,6 +842,7 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:233.333px;line-height:1;font-family:'Barlow Condensed';-inkscape-font-specification:'Barlow Condensed, ';text-align:start;text-anchor:start;fill:#ffffff;stroke-width:3.125"
        x="144.16269"
        y="863.87048"
+       inkscape:label="date"
        id="text2185"><tspan
          sodipodi:role="line"
          id="tspan2183"
