@@ -8,7 +8,7 @@
    height="1919.9999"
    viewBox="0 0 1080 1919.9999"
    sodipodi:docname="story_match_day.svg"
-   inkscape:version="1.2.1 (9c6d41e, 2022-07-14)"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -804,14 +804,14 @@
      showgrid="false"
      showguides="true"
      inkscape:zoom="0.23952184"
-     inkscape:cx="1102.196"
-     inkscape:cy="1381.9199"
-     inkscape:window-width="1512"
-     inkscape:window-height="916"
+     inkscape:cx="1104.2834"
+     inkscape:cy="903.88417"
+     inkscape:window-width="1312"
+     inkscape:window-height="760"
      inkscape:window-x="0"
      inkscape:window-y="38"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="g488" />
+     inkscape:window-maximized="0"
+     inkscape:current-layer="g470" />
   <g
      id="g140"
      inkscape:groupmode="layer"
@@ -976,7 +976,8 @@
          x="1688.8751"
          y="1993.42">19:00</tspan></text>
     <g
-       id="g366">
+       id="g366"
+       inkscape:label="logo-team1">
       <g
          id="g368"
          clip-path="url(#clipPath372)">
@@ -1166,7 +1167,8 @@
       </g>
     </g>
     <g
-       id="g470">
+       id="g470"
+       inkscape:label="logo-team2">
       <g
          id="g472"
          clip-path="url(#clipPath476)">
@@ -1195,7 +1197,7 @@
          id="tspan2813"
          style="stroke-width:3.125"
          x="1674.2101"
-         y="1236.8651"></tspan></text>
+         y="1236.8651" /></text>
   </g>
   <g
      id="g488"

@@ -41,8 +41,9 @@ months = ["JANVIER",
 team_ics_name = "Nyon HandBall La Côte"
 teams_replacements = {
     "Nyon HandBall La Côte": "NHB La Côte",
-    "Lausanne-Ville/Cugy Handball": "LVC",
-    "Lancy Plan-les-Ouates Hb": "Lancy PLO"
+    "Lausanne-Ville/Cugy Handball": "LVC Handball",
+    "Lancy Plan-les-Ouates Hb": "Lancy PLO",
+    "SG Genève Paquis - Lancy PLO": "Genève Paquis - Lancy"
 }
 
 level_replacements = {
@@ -55,6 +56,8 @@ level_replacements = {
     "D3-08": "3ième Ligue Dames",
     "Cup Mobilière H - Tour de qualification": "Cup Mobilière H"
 }
+
+
 
 def update_color(style_elem, html_color):
     if style_elem.startswith("fill:"):
@@ -91,19 +94,27 @@ def replace_all(tree, replacements):
         if not replacements:
             return
 
-def update_template(template_name, output_name, replacements):
-    svg_template = os.path.join(svg_template_folder, template_name)
+def update_template(template_name, date, replacements, png=True):
+    output_name = date+'_'+template_name
+    svg_template = os.path.join(svg_template_folder, template_name)+".svg"
     svg_output = os.path.join(svg_output_folder, output_name+".svg")
-    png_output = os.path.join(png_output_folder, output_name+".png")
 
     svg = ET.parse(svg_template)
     svg_root = svg.getroot()
     replace_all(svg_root, replacements)
     svg.write(svg_output)
 
-    subprocess.run([inkscape_path, '-w', '1080', '-o', png_output, svg_output])
+    if png:
+        convert_to_png(svg_output)
 
-Match = namedtuple('Match', ['time', 'level', 'team1', 'team2'])
+    return svg_output
+
+def convert_to_png(svg_file):
+    output_name = os.path.split(svg_file)[-1][:-4]+".png"
+    png_output = os.path.join(png_output_folder, output_name)
+    subprocess.run([inkscape_path, '-w', '1080', '-o', png_output, svg_file])
+
+Match = namedtuple('Match', ['time', 'place', 'level', 'team1', 'team2'])
 
 def normalize_team(t):
     try:
@@ -126,15 +137,10 @@ def parse_match(ics_event):
     else:
         t1 = ics_event.name[p1 + 3:-(len(team_ics_name)  + 3)]
         t2 = team_ics_name
-    print(ics_event.name)
-    l = normalize_level(ics_event.name[:p1])
-    m = Match(time, l, normalize_team(t1), normalize_team(t2))
-    print(m)
-    return m
+    return Match(time, ics_event.location, ics_event.name[:p1], normalize_team(t1), normalize_team(t2))
 
 
-def convert_date(ics_date):
-    date = ics_date.date()
+def convert_date(date):
     week_day = date.weekday()
     week_day = week_days[week_day]
     month_day = str(date.day)
@@ -156,11 +162,57 @@ def parse_calendar(ics_file_path):
 
     return dates_to_matches
 
+
+def replacements_from_hd_match(match, id):
+    base = "match"+str(id)+"-"
+    return {
+        base+"team1": match.team1,
+        base+"team2": match.team2,
+        base+"time": match.time,
+        base+"place": match.place,
+    }
+
+
+def replacements_from_match(match, id):
+    t1 = match.team1
+    t2 = match.team2
+    if t1.startswith("NHB"):
+        t1 += "-"+normalize_level(match.level)
+    else:
+        t2 += "-" + normalize_level(match.level)
+
+    base = "match"+str(id)+"-"
+    return {
+        base+"team1": t1,
+        base+"team2": t2,
+        base+"time": match.time + ' - ' + match.place,
+    }
+
 def generate_posts(dates_to_matches):
     for date, matches in dates_to_matches.items():
-        print(date, matches)
+        other_matches = []
+        for match in matches:
+            rs = {"date": convert_date(date)}
+            if match.level.startswith("H1"):
+                rs |= replacements_from_hd_match(match,1)
+                update_template('match_day_h1', date.isoformat(), rs)
+                update_template('results_h1', date.isoformat(), rs, False)
+            elif match.level.startswith("D3"):
+                rs |= replacements_from_hd_match(match,1)
+                update_template('match_day_d3', date.isoformat(), rs)
+                update_template('results_d3', date.isoformat(), rs, False)
+            else:
+                other_matches.append(match)
 
-
+        if other_matches:
+            rs = {"date": convert_date(date)}
+            md_template = "match_day_"+str(len(other_matches))
+            r_template = "match_day_"+str(len(other_matches))
+            other_matches.sort(key=lambda m: m.time)
+            for i, match in enumerate(other_matches, start=1):
+                rs |= replacements_from_match(match, i)
+            update_template(md_template, date.isoformat(), rs)
+            update_template(r_template, date.isoformat(), rs, False)
 
 if __name__ == "__main__":
     os.makedirs(os.path.dirname(svg_output_folder), exist_ok=True)
