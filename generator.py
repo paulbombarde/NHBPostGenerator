@@ -54,7 +54,8 @@ teams_replacements = {
     "Lancy Plan-les-Ouates Hb": "Lancy PLO",
     "SG Genève Paquis - Lancy PLO": "Genève Paquis - Lancy",
     "SG Genève /TCGG/ Nyon": "SG Genève/TCGG/Nyon",
-    "SG Wacker Thun 2 / Steffisburg": "Wacker Thun/Steffisburg"
+    "SG Wacker Thun 2 / Steffisburg": "Wacker Thun/Steffisburg",
+    "SG Troinex / Chênois Genève": "SG Troinex/Chênois"
 }
 
 level_replacements = {
@@ -131,10 +132,11 @@ def convert_to_png(svg_file):
 Match = namedtuple('Match', ['time', 'place', 'level', 'team1', 'team2'])
 
 def normalize_team(t):
+    t1 = t.strip(" *°")
     try:
-        return teams_replacements[t.strip()]
+        return teams_replacements[t1]
     except KeyError:
-        return t.strip()
+        return t1
 
 
 def normalize_level(l):
