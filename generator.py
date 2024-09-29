@@ -1,20 +1,27 @@
 import os.path
 import xml.etree.ElementTree as ET
 import subprocess
+from copy import deepcopy
+from datetime import date
+
 from ics import Calendar
 import sys
 from collections import defaultdict
 from collections import namedtuple
+from base64 import b64encode
+from PIL import Image
 
 inkscape_path = '/Applications/Inkscape.app/Contents/MacOS/inkscape'
 label_key = '{http://www.inkscape.org/namespaces/inkscape}label'
 span_tag = '{http://www.w3.org/2000/svg}tspan'
+href_tag = "{http://www.w3.org/1999/xlink}href"
 
 team_text_marker = "NHB"
 team_text_color = "#e0038c"
 other_team_text_color = "#ffffff"
 
 svg_template_folder = 'templates'
+teams_logos_folder = 'logos_clubs'
 svg_output_folder = 'outputs/svg'
 png_output_folder = 'outputs/png'
 
@@ -25,6 +32,7 @@ week_days = ["LUNDI",
             "VENDREDI",
             "SAMEDI",
             "DIMANCHE"]
+
 months = ["JANVIER",
           "FEVRIER",
           "MARS",
@@ -43,7 +51,9 @@ teams_replacements = {
     "Nyon HandBall La Côte": "NHB La Côte",
     "Lausanne-Ville/Cugy Handball": "LVC Handball",
     "Lancy Plan-les-Ouates Hb": "Lancy PLO",
-    "SG Genève Paquis - Lancy PLO": "Genève Paquis - Lancy"
+    "SG Genève Paquis - Lancy PLO": "Genève Paquis - Lancy",
+    "SG Genève /TCGG/ Nyon": "SG Genève/TCGG/Nyon",
+    "SG Wacker Thun 2 / Steffisburg": "Wacker Thun/Steffisburg"
 }
 
 level_replacements = {
@@ -94,7 +104,9 @@ def replace_all(tree, replacements):
         if not replacements:
             return
 
-def update_template(template_name, date, replacements, png=True):
+def update_template(template_name, date, _replacements, png=True):
+    replacements = deepcopy(_replacements)
+
     output_name = date+'_'+template_name
     svg_template = os.path.join(svg_template_folder, template_name)+".svg"
     svg_output = os.path.join(svg_output_folder, output_name+".svg")
@@ -102,6 +114,7 @@ def update_template(template_name, date, replacements, png=True):
     svg = ET.parse(svg_template)
     svg_root = svg.getroot()
     replace_all(svg_root, replacements)
+    replace_logos(svg_root, _replacements)
     svg.write(svg_output)
 
     if png:
@@ -118,9 +131,9 @@ Match = namedtuple('Match', ['time', 'place', 'level', 'team1', 'team2'])
 
 def normalize_team(t):
     try:
-        return teams_replacements[t]
+        return teams_replacements[t.strip()]
     except KeyError:
-        return t
+        return t.strip()
 
 
 def normalize_level(l):
@@ -188,17 +201,24 @@ def replacements_from_match(match, id):
         base+"time": match.time + ' - ' + match.place,
     }
 
-def generate_posts(dates_to_matches):
+
+def generate_posts(dates_to_matches, start= date.today()):
     for date, matches in dates_to_matches.items():
+        if date < start:
+            print("Skipping date ", date)
+            continue
+
         other_matches = []
         for match in matches:
             rs = {"date": convert_date(date)}
             if match.level.startswith("H1"):
                 rs |= replacements_from_hd_match(match,1)
+                update_template('story_match_day', date.isoformat(), rs)
                 update_template('match_day_h1', date.isoformat(), rs)
                 update_template('results_h1', date.isoformat(), rs, False)
             elif match.level.startswith("D3"):
                 rs |= replacements_from_hd_match(match,1)
+                update_template('story_match_day_dames', date.isoformat(), rs)
                 update_template('match_day_d3', date.isoformat(), rs)
                 update_template('results_d3', date.isoformat(), rs, False)
             else:
@@ -207,12 +227,65 @@ def generate_posts(dates_to_matches):
         if other_matches:
             rs = {"date": convert_date(date)}
             md_template = "match_day_"+str(len(other_matches))
-            r_template = "match_day_"+str(len(other_matches))
+            r_template = "results_"+str(len(other_matches))
             other_matches.sort(key=lambda m: m.time)
             for i, match in enumerate(other_matches, start=1):
                 rs |= replacements_from_match(match, i)
             update_template(md_template, date.isoformat(), rs)
             update_template(r_template, date.isoformat(), rs, False)
+
+
+teams_logos={
+    "NHB La Côte": "NHB.png",
+    "LVC Handball": "LVC.png",
+    "KTV Visp Handball": "Visp.png",
+    'Handball Oberaargau': "HVH.png",
+    "SG TV Solothurn": "TV_Solothurn.png",
+    "SG WEST Crissier": "crissier.png",
+    "SG TV Birsfelden": "TVBirsfelden.png",
+    'TV Pratteln NS 1': "NSPratteln.png",
+    "Wacker Thun/Steffisburg": "Wacker_Thun.png",
+}
+
+def replace_logos(svg_tree, _replacements):
+    for logo_label, team_label in [("match1-logo-team1", "match1-team1"), ("match1-logo-team2", "match1-team2")]:
+        img = find_image(svg_tree, logo_label)
+        if img is None:
+            continue
+
+        logo = teams_logos[_replacements[team_label]]
+        logo = os.path.join(teams_logos_folder, logo)
+        if not os.path.exists(logo):
+            raise Exception("Could not find logo file ", logo)
+
+        replace_logo(img, logo)
+
+def replace_logo(svg_image, image_path):
+    img = Image.open(image_path)
+    svg_height = float(svg_image.attrib['width']) * img.height / img.width
+    svg_dy = 0.5 * (float(svg_image.attrib['height']) - svg_height)
+    svg_y = float(svg_image.attrib['y']) + svg_dy
+    svg_image.attrib["y"] = str(svg_y)
+    svg_image.attrib["height"] = str(svg_height)
+
+    with open(image_path, "rb") as image_file:
+        svg_image.attrib[href_tag] ='data:image/png;base64,'+ str(b64encode(image_file.read()), encoding='utf-8')
+
+
+def find_image(svg, image_label):
+    try:
+        if svg.attrib[label_key] == image_label:
+            return svg
+    except KeyError:
+        pass
+
+    for child in svg:
+        img = find_image(child, image_label)
+        if not img == None:
+            return img
+
+    return None
+
 
 if __name__ == "__main__":
     os.makedirs(os.path.dirname(svg_output_folder), exist_ok=True)
