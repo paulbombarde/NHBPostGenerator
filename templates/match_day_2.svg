@@ -907,9 +907,9 @@
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
      showguides="true"
-     inkscape:zoom="1.5562513"
-     inkscape:cx="326.42543"
-     inkscape:cy="833.09168"
+     inkscape:zoom="0.51437214"
+     inkscape:cx="-91.373533"
+     inkscape:cy="794.17209"
      inkscape:window-width="1504"
      inkscape:window-height="812"
      inkscape:window-x="0"
@@ -1194,7 +1194,8 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:233.333px;line-height:1;font-family:'Barlow Condensed';-inkscape-font-specification:'Barlow Condensed, ';text-align:start;text-anchor:start;fill:#ffffff;stroke-width:3.125"
        x="145.24074"
        y="873.25061"
-       id="text2185"><tspan
+       id="text2185"
+       inkscape:label="date"><tspan
          sodipodi:role="line"
          id="tspan2183"
          style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:condensed;font-family:'Barlow Condensed';-inkscape-font-specification:'Barlow Condensed,  Italic Condensed';text-align:start;text-anchor:start;stroke-width:3.125"
