@@ -50,6 +50,7 @@ team_ics_name = "Nyon HandBall La Côte"
 teams_replacements = {
     "Nyon HandBall La Côte": "NHB La Côte",
     "Lausanne-Ville/Cugy Handball": "LVC Handball",
+    "Lausanne-Ville/Cugy Handball 2": "LVC Handball 2",
     "Lancy Plan-les-Ouates Hb": "Lancy PLO",
     "SG Genève Paquis - Lancy PLO": "Genève Paquis - Lancy",
     "SG Genève /TCGG/ Nyon": "SG Genève/TCGG/Nyon",
@@ -238,6 +239,7 @@ def generate_posts(dates_to_matches, start= date.today()):
 teams_logos={
     "NHB La Côte": "NHB.png",
     "LVC Handball": "LVC.png",
+    "LVC Handball 2": "LVC.png",
     "KTV Visp Handball": "Visp.png",
     'Handball Oberaargau': "HVH.png",
     "SG TV Solothurn": "TV_Solothurn.png",
@@ -245,6 +247,11 @@ teams_logos={
     "SG TV Birsfelden": "TVBirsfelden.png",
     'TV Pratteln NS 1': "NSPratteln.png",
     "Wacker Thun/Steffisburg": "Wacker_Thun.png",
+    "HBC Neuchâtel": "Neuchatel.png",
+    "HBC Moudon": "HBCMoudon.png",
+    "PSG Lyss F3": "PSGLyss.png",
+    "SG Vaud La Côte 2": "HBC - Nyon.png",
+    "HBC Etoy": "etoy.png",
 }
 
 def replace_logos(svg_tree, _replacements):
