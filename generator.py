@@ -69,7 +69,26 @@ level_replacements = {
     "Cup Mobilière H - Tour de qualification": "Cup Mobilière H"
 }
 
-
+players = {
+    2: "Thomas Wagner",
+    3: "Maël Céron",
+    4: "Loïc Mazzoni",
+    7: "Daniel Hardy",
+    9: "Anatole Barraine",
+    10: "Hippolyte Barraine",
+    14: "Guilhem Rozier",
+    15: "Gergo Bardos",
+    16: "Oussama Medahi",
+    17: "Aladin Pearzic",
+    20: "Ramzi Hadjadj-Aoul",
+    21: "Massimo Campanile",
+    25: "Victor Le Bot",
+    28: "Kenny Etenna",
+    29: "Mohamed Bellayachi",
+    39: "Fabio Campanile",
+    92: "Rayane Souni",
+    96: "Fares Froom"
+}
 
 def update_color(style_elem, html_color):
     if style_elem.startswith("fill:"):
@@ -219,6 +238,7 @@ def generate_posts(dates_to_matches, start= date.today()):
                 update_template('story_match_day', date.isoformat(), rs)
                 update_template('match_day_h1', date.isoformat(), rs)
                 update_template('results_h1', date.isoformat(), rs, False)
+                update_template('story_players', date.isoformat(), rs, False)
             elif match.level.startswith("D3"):
                 rs |= replacements_from_hd_match(match,1)
                 update_template('story_match_day_dames', date.isoformat(), rs)
