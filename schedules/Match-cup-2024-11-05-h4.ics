@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Schweizerischer Handball-Verband//Matchcenter//FR
+TIMEZONE:Europe/Zurich
+X-WR-TIMEZONE:Europe/Zurich
+NAME:Liste des matchs Nyon Handball - La Côte
+X-WR-CALNAME:Liste des matchs Nyon Handball - La Côte
+BEGIN:VEVENT
+UID:488552@www.handball.ch
+SEQUENCE:0
+DTSTART:20241105T204500
+DTEND:20241105T221500
+DTSTAMP:20241103T202712
+SUMMARY:Cup R H - 1/8 finale - Nyon HandBall La Côte (H4) - Lausanne-Ville/Cugy Handball 3 (H3)
+LOCATION:Nyon Cossy
+DESCRIPTION:https://www.handball.ch/de/matchcenter/spiele/488552
+END:VEVENT
+END:VCALENDAR

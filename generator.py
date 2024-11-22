@@ -66,7 +66,9 @@ level_replacements = {
     "M14F-P-06": "M14P",
     "M16F-P-08": "M16P",
     "D3-08": "3ième Ligue Dames",
-    "Cup Mobilière H - Tour de qualification": "Cup Mobilière H"
+    "Cup Mobilière H - Tour de qualification": "Cup Mobilière H",
+    "Cup R H": "Cup R H - 1/8",
+    'Cup R M15 G':'Cup R M15 G'
 }
 
 players = {
